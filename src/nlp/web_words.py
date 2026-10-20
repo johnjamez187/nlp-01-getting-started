@@ -1,5 +1,10 @@
 """web_words.py - Project script (example).
 
+Author: John James
+Date: October 2026
+Course: Web Mining & Applied NLP
+Project: nlp-01-geting-started
+
 Purpose
 
   Retrieve a web page, extract its text, count word frequencies,
