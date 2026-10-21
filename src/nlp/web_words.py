@@ -67,7 +67,7 @@ log_path(LOG, "SCRIPTS_PATH", SCRIPTS_PATH)
 # The Shakespeare page is simple and stable.
 # The Wikipedia page is interesting, but requires a User-Agent header.
 # url: str = "https://shakespeare.mit.edu/romeo_juliet/full.html"
-url: str = "https://en.wikipedia.org/wiki/Natural_language_processing"
+url: str = "https://en.wikipedia.org/wiki/Kansas_City_Chiefs"
 
 # Some sites reject requests that look like anonymous scripts.
 # This header helps the request look more like a normal browser visit.
@@ -135,8 +135,8 @@ print(text[:1000])
 words: list[str] = text.split()
 count_of_words: int = len(words)
 
-print("First 20 raw words:")
-print(words[:20])
+print("First 25 raw words:")
+print(words[:25])
 print(f"Total raw words: {count_of_words:,}")
 
 # Convert all words to lowercase so "Language" and "language"
@@ -153,8 +153,8 @@ clean_words: list[str] = [
 ]
 count_of_clean_words: int = len(clean_words)
 
-print("First 20 cleaned words:")
-print(clean_words[0:20])
+print("First 25 cleaned words:")
+print(clean_words[0:25])
 print(f"Total cleaned words: {count_of_clean_words:,}")
 
 
@@ -175,17 +175,17 @@ df: pl.DataFrame = pl.DataFrame({"word": clean_words})
 # Function chain: group_by() -> len() -> sort()
 freq_df: pl.DataFrame = df.group_by("word").len().sort("len", descending=True)
 
-print("Top 20 most frequent words:")
-print(freq_df.head(20))
+print("Top 25 most frequent words about the Kansas City Chiefs:")
+print(freq_df.head(25))
 
 
 # ============================================================
-# Section 7. Build "Most Frequent Words" Bar Chart
+# Section 7. Build ""Kansas City Chiefs - Most Frequent Words" Bar Chart
 # ============================================================
 
 # Focus on the 10 most common words for a simple bar chart.
 # Use head(10) to get the top 10 rows of the frequency DataFrame.
-top_df: pl.DataFrame = freq_df.head(10)
+top_df: pl.DataFrame = freq_df.head(25)
 
 # Make the figure size larger for better readability.
 # 10 inches wide by 5 inches tall is a common size for bar charts.
