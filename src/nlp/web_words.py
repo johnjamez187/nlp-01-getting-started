@@ -3,7 +3,7 @@
 Author: John James
 Date: October 2026
 Course: Web Mining & Applied NLP
-Project: nlp-01-geting-started
+Project: nlp-01-getting-started
 
 Purpose
 
@@ -207,6 +207,14 @@ plt.title("Most Frequent Words")
 plt.xlabel("Word")
 plt.ylabel("Frequency")
 plt.tight_layout()
+
+# Save the Kansas City Chiefs bar graph
+image_folder = Path("docs/images")
+image_folder.mkdir(parents=True, exist_ok=True)
+
+plt.savefig(image_folder / "chiefs-word-frequency.png", dpi=300, bbox_inches="tight")
+
+# Display the bar graph
 plt.show()
 
 
@@ -233,31 +241,23 @@ wc: WordCloud = WordCloud(width=1000, height=500, background_color="white")
 
 # Generate the word cloud from the frequency dictionary.
 wc.generate_from_frequencies(freq_dict)
+# ============================================================
+# Display and Save the Kansas City Chiefs Word Cloud
+# ============================================================
 
-# Set the figure size in inches
-plt.figure(figsize=(12, 6))
-
-# Display the word cloud image with imshow() and turn off axes for a cleaner look.
-# Display the Kansas City Chiefs word cloud
-plt.imshow(wc)
-plt.axis("off")
-plt.title("Kansas City Chiefs - Word Cloud")
-
-# Create a folder for documentation images
+# Create the documentation images folder
 image_folder = Path("docs/images")
 image_folder.mkdir(parents=True, exist_ok=True)
 
-# Save the word cloud as a PNG
-plt.savefig(image_folder / "chiefs-word-cloud.png", dpi=300, bbox_inches="tight")
+# Save the generated word cloud directly as a PNG
+wc.to_file(str(image_folder / "chiefs-word-cloud.png"))
+
+print("Kansas City Chiefs word cloud saved successfully!")
 
 # Display the word cloud
+plt.figure(figsize=(12, 6))
+plt.imshow(wc, interpolation="bilinear")
+plt.axis("off")
+plt.title("Kansas City Chiefs - Word Cloud")
+plt.tight_layout()
 plt.show()
-
-# ============================================================
-# LOG THE END (only in the script)
-# ============================================================
-
-LOG.info("========================")
-LOG.info("Pipeline executed successfully!")
-LOG.info("========================")
-LOG.info("END main()")

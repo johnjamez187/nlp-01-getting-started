@@ -16,6 +16,9 @@ My project analyzed 26,124 raw words, cleaned 15,650 words and created a bar gra
 
 The five most frequent words are as listed: chiefs, retrieved, from, kansas, and city.
 
+![Kansas City Chiefs Word Cloud](images/chiefs-word-cloud.png)
+![Kansas City Chiefs Word Frequency Chart](images/chiefs-word-frequency.png)
+
 ## Tools and Methods
 
 The project uses:
