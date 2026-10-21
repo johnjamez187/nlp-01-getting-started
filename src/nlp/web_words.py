@@ -238,9 +238,19 @@ wc.generate_from_frequencies(freq_dict)
 plt.figure(figsize=(12, 6))
 
 # Display the word cloud image with imshow() and turn off axes for a cleaner look.
+# Display the Kansas City Chiefs word cloud
 plt.imshow(wc)
 plt.axis("off")
-plt.title("Word Cloud")
+plt.title("Kansas City Chiefs - Word Cloud")
+
+# Create a folder for documentation images
+image_folder = Path("docs/images")
+image_folder.mkdir(parents=True, exist_ok=True)
+
+# Save the word cloud as a PNG
+plt.savefig(image_folder / "chiefs-word-cloud.png", dpi=300, bbox_inches="tight")
+
+# Display the word cloud
 plt.show()
 
 # ============================================================

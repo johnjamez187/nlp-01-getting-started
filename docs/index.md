@@ -1,15 +1,20 @@
-# Web Mining and Applied NLP Project Report
+# Kansas City Chiefs - Web Mining and Applied NLP Project Report
 
-Web Mining and Applied NLP | Project 01 | Example Report
+Author: John James
+Project: nlp-01-getting-started
+Date October 2026
 
 ## Overview
 
-This project establishes a professional Python environment
-for acquiring and analyzing text from web pages.
+For this project I seleted the Kansas City Chiefs wikipedia page https://en.wikipedia.org/wiki/Kansas_City_Chiefs to help me retrieve information about the Kansas City Chiefs.
 
-The objective is to demonstrate that a Python project can
-retrieve web content, extract text, compute word frequencies,
-and produce visualizations using a reproducible workflow.
+The purpose was to get data from a webpage, clean text, count reocurring words, and put the results into a chart.
+
+## Results
+
+My project analyzed 26,124 raw words, cleaned 15,650 words and created a bar graph that displayed the 25 most common words.
+
+The five most frequent words are as listed: chiefs, retrieved, from, kansas, and city.
 
 ## Tools and Methods
 
